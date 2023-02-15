@@ -1,10 +1,15 @@
 require('dotenv').config()
 
 const express = require('express')
+const bodyParser = require('body-parser')
 const jwt = require('jsonwebtoken')
+
 const app = express()
 
-app.use(express.json())
+//Middleware
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
 
 
 const posts = [
@@ -28,7 +33,6 @@ app.get('/posts', authenticateToken,(req, res) => {
 app.post('/login', (req, res) => {
     const username = req.body.username
     const user = {name: username}
-    
 
     console.log(user)
     const accessToken = jwt.sign(user && user, process.env.ACCESS_TOKEN_SECRET)
@@ -47,6 +51,10 @@ function authenticateToken (req,res,next) {
         next()
     })
 }
+
+
+
+
 
 
 app.listen(3300)

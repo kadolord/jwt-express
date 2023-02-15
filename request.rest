@@ -1,5 +1,5 @@
 GET http://localhost:3300/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRGluIiwiaWF0IjoxNjc2NDQ1NjgwfQ.DAjLC_BvqkFGF5THjzC2JBqmQH5a_tOzbQHKo1qi-J4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzY0NDY1OTd9.8QG1JW2pN4-vgAoHPbIMVIatrSgm0UCGen-_rsGiQEQ
 ###
 
 POST http://localhost:3300/login
